@@ -27,9 +27,11 @@ if [ "$MUTE" == "[off]" ]; then
     ICON=audio-volume-muted
 fi
 
+echo $VOLUME
 
+if cat /tmp/addr.tmp; then
+    notify-send "Headphones" "$VOLUME/100" -h int:value:$VOLUME -r "$(cat /tmp/addr.tmp)" -p > /tmp/addr.tmp
+else
+    notify-send "Headphones" "$VOLUME/100" -h int:value:$VOLUME -p > /tmp/addr.tmp
+fi
 
-NOTI_ID=$(notify-send.py "Headphones" "$VOLUME/100" \
-                         --hint string:image-path:$ICON boolean:transient:true \
-                             int:value:$VOLUME \
-                         --replaces-process "volume-popup")
