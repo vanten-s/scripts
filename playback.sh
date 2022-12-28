@@ -18,7 +18,7 @@ fi
 
 if [ "Playing" == $player_status ];
 then
-    combined="⏵︎ $combined"
+    combined="▶ $combined"
 fi
 
 echo $combined
