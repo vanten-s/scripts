@@ -14,11 +14,11 @@ fi
 
 
 VOLUME="$(pulsemixer --get-volume | sed '~s/. .//')"
-MUTE=$(echo $AMIXER | grep -o '\[off\]' | tail -n 1)
 
-if cat /tmp/addr.tmp; then
-    notify-send "Headphones" "$VOLUME/100" -h int:value:$VOLUME -r "$(cat /tmp/addr.tmp)" -p > /tmp/addr.tmp
+if [ -z cat /tmp/addr_vol ]; then
+    notify-send "Headphones" "$VOLUME/100" -h int:value:$VOLUME -p > /tmp/addr_vol
+    notify-send "Didn't find anything!" "Vol.sh didn't find /tmp/addr_vol"
 else
-    notify-send "Headphones" "$VOLUME/100" -h int:value:$VOLUME -p > /tmp/addr.tmp
+    notify-send "Headphones" "$VOLUME/100" -h int:value:$VOLUME -r "$(cat /tmp/addr.tmp)" -p > /tmp/addr_vol
 fi
 
