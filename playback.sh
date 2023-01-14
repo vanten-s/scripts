@@ -18,12 +18,12 @@ fi
 
 if [ "Paused" == $player_status ];
 then
-    combined="%{T4}⏸ %{T-} $combined"
+    combined="%{T4}⏸%{T-} $combined"
 fi
 
 if [ "Playing" == $player_status ];
 then
-    combined="%{T4}▶ %{T-} $combined"
+    combined="%{T4}▶%{T-} $combined"
 fi
 
 echo $combined
