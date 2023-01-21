@@ -13,7 +13,9 @@ if [ "$1" == "mute" ]; then
 fi
 
 
-VOLUME="$(pulsemixer --get-volume | sed '~s/. .//')"
+TEXT="$(pulsemixer --get-volume)"
+IFS=' '
+read -ra VOLUME <<< "$TEXT"
 
 touch /tmp/addr_vol
 if [ -z $(cat /tmp/addr_vol) ]; then
