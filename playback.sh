@@ -2,7 +2,7 @@
 
 if ! playerctl status &> /dev/null;
 then
-    echo ""
+    echo " "
     exit
 fi
 
@@ -27,6 +27,6 @@ fi
 #     combined="%{T1}▶%{T-} $combined"
 # fi
 
-echo "$combined"
+echo " $combined "
 
 
