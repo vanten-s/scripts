@@ -27,6 +27,6 @@ fi
 #     combined="%{T1}▶%{T-} $combined"
 # fi
 
-echo " $combined "
+echo "$combined"
 
 
