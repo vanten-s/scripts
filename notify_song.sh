@@ -1,4 +1,4 @@
 #!/bin/bash
 
-notify-send.py "Spotify" "$(playerctl metadata title)"
+notify-send.py "Spotify" "$(playerctl -p spotify metadata title)"
 
