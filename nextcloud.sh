@@ -1,2 +1,2 @@
 #!/bin/bash
-surf https://nextcloud.vanten-s.com/
+firefox --kiosk nextcloud.vanten-s.com
