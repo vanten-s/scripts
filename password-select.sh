@@ -15,6 +15,6 @@ if [ -z $choice ];
 then
     exit
 else
-    xdotool type "$(pass show $folder/$choice)"
+    xdotool type "$(pass show $folder/$choice | head -n1)"
 fi
 

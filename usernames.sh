@@ -15,6 +15,6 @@ if [ -z $choice ];
 then
     exit
 else
-    xdotool type $choice
+    xdotool type $(pass show $folder/$choice | tail -n1 | sed 's/username: //')
 fi
 
