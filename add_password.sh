@@ -1,9 +1,9 @@
 #!/bin/bash
 
-URL=$(echo -n | dmenu -p "URL?")
-USERNAME=$(echo -n | dmenu -p "USENAME?")
-SERVICE=$(echo -n | dmenu -p "SERVICE?")
-PASS_NAME=$(echo -n | dmenu -p "PASS NAME?")
+URL=$(echo -n | ~/.local/bin/dmenu -p "URL?")
+USERNAME=$(echo -n | ~/.local/bin/dmenu -p "USENAME?")
+SERVICE=$(echo -n | ~/.local/bin/dmenu -p "SERVICE?")
+PASS_NAME=$(echo -n | ~/.local/bin/dmenu -p "PASS NAME?")
 
 if [ -z $USERNAME ]; then
     USERNAME="vanten-s@vanten-s.com"

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-folder="$(ls ~/.password-store/ | sed -e 's/\.gpg$//' | dmenu -i)"
+folder="$(ls ~/.password-store/ | sed -e 's/\.gpg$//' | ~/.local/bin/dmenu -i)"
 
 if [ -z $folder ];
 then
@@ -9,7 +9,7 @@ else
     suboptions=$(pass show $choice)
 fi
 
-choice="$(ls ~/.password-store/$folder | sed -e 's/\.gpg$//' | dmenu -i)"
+choice="$(ls ~/.password-store/$folder | sed -e 's/\.gpg$//' | ~/.local/bin/dmenu -i)"
 
 if [ -z $choice ];
 then

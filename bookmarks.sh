@@ -1,5 +1,5 @@
 #!/bin/bash
 
-xdotool type "$(cat ~/scripts/metadata/bookmarks.txt | dmenu -i)"
+xdotool type "$(cat ~/scripts/metadata/bookmarks.txt | ~/.local/bin/dmenu -i)"
 
 
