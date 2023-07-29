@@ -10,5 +10,5 @@ if [ -z $USERNAME ]; then
 fi
 
 printf "hii\nurl: $URL\nusername: $USERNAME" | pass insert -m $SERVICE/$PASS_NAME
-pass generate -i $SERVICE/$PASS_NAME
+pass generate -i -n $SERVICE/$PASS_NAME 40
 
