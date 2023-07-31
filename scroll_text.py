@@ -1,4 +1,4 @@
-#!/bin/python3
+#!/usr/bin/env python
 
 from sys import stdin
 from sys import argv
