@@ -1,6 +1,6 @@
 #!/bin/bash
 
-folder="$(ls ~/.password-store/ | sed -e 's/\.gpg$//' | dmenu -i)"
+folder="$(ls ~/.password-store/ | sed -e 's/\.gpg$//' | ~/.local/bin/dmenu -i)"
 
 if [ -z $folder ];
 then
@@ -9,12 +9,12 @@ else
     suboptions=$(pass show $choice)
 fi
 
-choice="$(ls ~/.password-store/$folder | sed -e 's/\.gpg$//' | dmenu -i)"
+choice="$(ls ~/.password-store/$folder | sed -e 's/\.gpg$//' | ~/.local/bin/dmenu -i)"
 
 if [ -z $choice ];
 then
     exit
 else
-    xdotool type $(pass show $folder/$choice | tail -n1 | sed 's/username: //')
+    xdotool type $(pass show $folder/$choice | grep username: | sed 's/username: //')
 fi
 

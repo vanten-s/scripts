@@ -14,5 +14,5 @@ then
     exit
 fi
 
-xdotool type "$(pass show $folder/$choice | head -n1)"
+xdotool type "$(pass otp $folder/$choice)"
 
